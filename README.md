@@ -5,9 +5,12 @@
  4. After everything is in, save the script and make sure you run it.
  5. Use on any news website you would like and enjoy!
 
-#Common FAQ's:
-Q. The script is telling me to enable developer mode to use. How do I enable it?
-A. For chrome or similar, go into the browser's extension settings, and on the top right there should be a switch to enable developer mode.
+Common FAQ's: <br/>
+Q. The script is telling me to enable developer mode to use. How do I enable it?  <br/>
+A. For chrome or similar, go into the browser's extension settings, and on the top right there should be a switch to enable developer mode.  <br/>
 
-Q. There are warning messages on the script, will it still work?
-A. Yes, for anything that does not involve red or an error message it should be fine.
+Q. There are warning messages on the script, will it still work?  <br/>
+A. Yes, for anything that does not involve red or an error message it should be fine.  <br/>
+
+Q. The script is opening three tabs for new/incognito tab, what is wrong?  <br/>
+A. Nothing is wrong, it will be looked at and fixed in the future.  <br/>
