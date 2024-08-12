@@ -14,3 +14,9 @@ A. Yes, for anything that does not involve red or an error message it should be 
 
 Q. The script is opening three tabs for new/incognito tab, what is wrong?  <br/>
 A. Nothing is wrong, it will be looked at and fixed in the future.  <br/>
+
+Q. How does it work?  <br/>
+A. It works by using 12ft ladder (12ft.io) as a proxy to move your article and unlock the paywall bypassing it for easy reading access. <br/>
+
+Q. What websites can I use it on?
+A. 
