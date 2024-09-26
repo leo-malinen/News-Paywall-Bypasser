@@ -20,9 +20,7 @@ GM_registerMenuCommand("Open in a New Tab", function() {
     var currentUrl = window.location.href;
     var proxyUrl = 'https://12ft.io/proxy?q=' + encodeURIComponent(currentUrl);
     if (!window.openedTab) {
-        window.openedTab = GM_openInTab(proxyUrl, { 
-            active: true 
-        });
+        window.openedTab = GM_openInTab(proxyUrl, { active: true });
     }
 });
 
@@ -31,8 +29,7 @@ GM_registerMenuCommand("Open in an Incognito Tab", function() {
     var currentUrl = window.location.href;
     var proxyUrl = 'https://12ft.io/proxy?q=' + encodeURIComponent(currentUrl);
     if (!window.openedIncognitoTab) {
-        window.openedIncognitoTab = GM_openInTab(proxyUrl, { 
-            active: true, incognito: true 
-        });
+        window.openedIncognitoTab = GM_openInTab(proxyUrl, { active: true, incognito: true });
     }
 });
+
