@@ -10,7 +10,19 @@
 // @grant        GM_openInTab
 // ==/UserScript==
 
-GM_registerMenuCommand("Replace Current Tab", () => { window.location = 'https://smry.ai/proxy?q=' + window.location }, "u");
-GM_registerMenuCommand("New Tab", () => GM_openInTab('https://smry.ai/proxy?q=' + window.location, { active: true }));
-GM_registerMenuCommand("New Incognito Tab", () => GM_openInTab('https://smry.ai/proxy?q=' + window.location, { active: true, incognito: true }));
+function replaceCurrentTab() {
+    window.location = 'https://smry.ai/proxy?q=' + window.location;
+}
+
+function openNewTab() {
+    GM_openInTab('https://smry.ai/proxy?q=' + window.location, { active: true });
+}
+
+function openNewIncognitoTab() {
+    GM_openInTab('https://smry.ai/proxy?q=' + window.location, { active: true, incognito: true });
+}
+
+GM_registerMenuCommand("Replace Current Tab", replaceCurrentTab, "u");
+GM_registerMenuCommand("New Tab", openNewTab);
+GM_registerMenuCommand("New Incognito Tab", openNewIncognitoTab);
 
