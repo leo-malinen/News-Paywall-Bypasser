@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Paywall Bypasser
-// @version      1.1
-// @description  Allows users to bypass the paywall of (almost) any article they want with a few other options.
+// @version      2.0
+// @description  Allows users to bypass the paywall of any article listed they want with a few choices to replace the tab or open in a new and incognito tab. Websites usable will be listed in the README.
 // @author       LeoMalinen
 // @license      NONE
 // @include      *://*
