@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Paywall Bypasser
-// @version      1.0
+// @version      1.1
 // @description  Allows users to bypass the paywall of (almost) any article they want with a few other options.
 // @author       LeoMalinen
 // @license      NONE
@@ -10,25 +10,7 @@
 // @grant        GM_openInTab
 // ==/UserScript==
 
-GM_registerMenuCommand("Replace the Current Tab", function() {
-    var currentUrl = window.location.href;
-    var proxyUrl = 'https://smry.ai/proxy?url=' + encodeURIComponent(currentUrl);
-    window.location.href = proxyUrl;
-}, "u");
+GM_registerMenuCommand("Replace Current Tab", () => { window.location = 'https://smry.ai/proxy?q=' + window.location }, "u");
+GM_registerMenuCommand("New Tab", () => GM_openInTab('https://smry.ai/proxy?q=' + window.location, { active: true }));
+GM_registerMenuCommand("New Incognito Tab", () => GM_openInTab('https://smry.ai/proxy?q=' + window.location, { active: true, incognito: true }));
 
-GM_registerMenuCommand("Open in a New Tab", function() {
-    var currentUrl = window.location.href;
-    var proxyUrl = 'https://smry.ai/proxy?url=' + encodeURIComponent(currentUrl);
-    if (!window.openedTab) {
-        window.openedTab = GM_openInTab(proxyUrl, { active: true });
-    }
-});
-
-GM_registerMenuCommand("Open in an Incognito Tab", function() {
-    console.log("Opening in Incognito Tab");
-    var currentUrl = window.location.href;
-    var proxyUrl = 'https://smry.ai/proxy?url=' + encodeURIComponent(currentUrl);
-    if (!window.openedIncognitoTab) {
-        window.openedIncognitoTab = GM_openInTab(proxyUrl, { active: true, incognito: true });
-    }
-});
