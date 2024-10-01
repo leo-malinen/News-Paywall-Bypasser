@@ -10,19 +10,17 @@
 // @grant        GM_openInTab
 // ==/UserScript==
 
-function replaceCurrentTab() {
-    window.location = 'https://smry.ai/proxy?q=' + window.location;
-}
+GM_registerMenuCommand("Replace Current Tab", function() {
+    let currentUrl = window.location.href;
+    window.location.href = 'https://smry.ai/proxy?q=' + currentUrl;
+}, "u");
 
-function openNewTab() {
-    GM_openInTab('https://smry.ai/proxy?q=' + window.location, { active: true });
-}
+GM_registerMenuCommand("New Tab", () => {
+    const newUrl = 'https://smry.ai/proxy?q=' + window.location.href;
+    GM_openInTab(newUrl, { active: true });
+});
 
-function openNewIncognitoTab() {
-    GM_openInTab('https://smry.ai/proxy?q=' + window.location, { active: true, incognito: true });
-}
-
-GM_registerMenuCommand("Replace Current Tab", replaceCurrentTab, "u");
-GM_registerMenuCommand("New Tab", openNewTab);
-GM_registerMenuCommand("New Incognito Tab", openNewIncognitoTab);
-
+GM_registerMenuCommand("New Incognito Tab", function() {
+    var incognitoUrl = 'https://smry.ai/proxy?q=' + window.location.href;
+    GM_openInTab(incognitoUrl, { active: true, incognito: true });
+});
